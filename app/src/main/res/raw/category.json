@@ -1,0 +1,32 @@
+[
+  {
+    "mId": 0,
+    "mValue": "General Vocabulary",
+    "mDescription": ""
+  },
+  {
+    "mId": 1,
+    "mValue": "IELTS Vocabulary",
+    "mDescription": "IELTS means International English Language Testing System and it is a test of English language proficiency. The test is designed to assess the language ability of non-native speakers of English who intend to study or work where English is the language of communication."
+  },
+  {
+    "mId": 2,
+    "mValue": "TOEIC Vocabulary",
+    "mDescription": "The Test of English for International Communication (TOEIC) is an English language test designed specifically to measure the everyday English skills of people working in an international environment."
+  },
+  {
+    "mId": 3,
+    "mValue": "Economy",
+    "mDescription": "The wealth and resources of a country or region, especially in terms of the production and consumption of goods and services."
+  },
+  {
+    "mId": 4,
+    "mValue": "Information Technology",
+    "mDescription": "The study or use of systems (especially computers and telecommunications) for storing, retrieving, and sending information."
+  },
+  {
+    "mId": 5,
+    "mValue": "Environment",
+    "mDescription": "The natural world, as a whole or in a particular geographical area, especially as affected by human activity."
+  }
+]
