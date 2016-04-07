@@ -8,24 +8,15 @@ import io.realm.annotations.PrimaryKey;
  */
 public class Type extends RealmObject {
     @PrimaryKey
-    private int mId;
-    private String mValue;
+    private String mName;
     private String mDescription;
 
-    public int getId() {
-        return mId;
+    public String getName() {
+        return mName;
     }
 
-    public void setId(int id) {
-        this.mId = id;
-    }
-
-    public String getValue() {
-        return mValue;
-    }
-
-    public void setValue(String value) {
-        this.mValue = value;
+    public void setName(String value) {
+        this.mName = value;
     }
 
     public String getDescription() {

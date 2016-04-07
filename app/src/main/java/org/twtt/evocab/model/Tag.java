@@ -8,22 +8,13 @@ import io.realm.annotations.PrimaryKey;
  */
 public class Tag extends RealmObject {
     @PrimaryKey
-    private int mId;
-    private String mValue;
-
-    public int getId() {
-        return mId;
-    }
-
-    public void setId(int id) {
-        this.mId = id;
-    }
+    private String mName;
 
     public String getValue() {
-        return mValue;
+        return mName;
     }
 
     public void setValue(String value) {
-        this.mValue = value;
+        this.mName = value;
     }
 }

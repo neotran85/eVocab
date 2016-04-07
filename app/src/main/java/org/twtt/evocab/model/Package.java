@@ -9,18 +9,9 @@ import io.realm.annotations.PrimaryKey;
  */
 public class Package extends RealmObject {
     @PrimaryKey
-    private int mId;
     private String mName;
     private String mDescription;
     private RealmList<Word> mWords;
-
-    public int getId() {
-        return mId;
-    }
-
-    public void setId(int id) {
-        this.mId = id;
-    }
 
     public String getName() {
         return mName;
@@ -54,7 +45,7 @@ public class Package extends RealmObject {
     public void removeTag(Word word) {
         if(this.mWords != null)
             for(Word iWork : mWords) {
-                if(iWork.getId() == word.getId()) {
+                if(iWork.getName() == word.getName()) {
                     mWords.remove(word);
                     return;
                 }

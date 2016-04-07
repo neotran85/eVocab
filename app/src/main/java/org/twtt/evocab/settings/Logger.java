@@ -11,4 +11,8 @@ public class Logger {
         if(!BuildConfigs.isLive())
             Log.v(tag, value);
     }
+    public static void e(String tag, String value) {
+        if(!BuildConfigs.isLive())
+            Log.e(tag, value);
+    }
 }

@@ -1,37 +1,30 @@
 [
   {
-    "mId": 0,
-    "mValue": "Noun",
+    "mName": "Noun",
     "mDescription": "A word (other than a pronoun) used to identify any of a class of people, places, or things common noun, or to name a particular one of these proper noun."
   },
   {
-    "mId": 1,
-    "mValue": "Adjective",
+    "mName": "Adjective",
     "mDescription": "A word or phrase naming an attribute, added to or grammatically related to a noun to modify or describe it."
   },
   {
-    "mId": 2,
-    "mValue": "Adverb",
+    "mName": "Adverb",
     "mDescription": "A word or phrase that modifies or qualifies an adjective, verb, or other adverb or a word group, expressing a relation of place, time, circumstance, manner, cause, degree, etc. (e.g., gently, quite, then, there )."
   },
   {
-    "mId": 3,
-    "mValue": "Verb",
+    "mName": "Verb",
     "mDescription": "A word used to describe an action, state, or occurrence, and forming the main part of the predicate of a sentence, such as hear, become, happen."
   },
   {
-    "mId": 4,
-    "mValue": "Article",
+    "mName": "Article",
     "mDescription": ""
   },
   {
-    "mId": 5,
-    "mValue": "Phrase",
+    "mName": "Phrase",
     "mDescription": "A small group of words standing together as a conceptual unit, typically forming a component of a clause."
   },
   {
-    "mId": 6,
-    "mValue": "Idiom",
+    "mName": "Idiom",
     "mDescription": "A group of words established by usage as having a meaning not deducible from those of the individual words (e.g., rain cats and dogs, see the light )."
   }
 ]

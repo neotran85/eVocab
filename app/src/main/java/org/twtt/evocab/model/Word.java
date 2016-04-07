@@ -12,27 +12,18 @@ import io.realm.annotations.PrimaryKey;
  */
 public class Word extends RealmObject {
     @PrimaryKey
-    private int mId;
-    private String mValue;
+    private String mName;
     private RealmList<Type> mTypes;
     private RealmList<Meaning> mMeanings;
     private RealmList<Category> mCategories;
     private RealmList<Tag> mTags;
-
-    public int getId() {
-        return mId;
+    
+    public String getName() {
+        return mName;
     }
 
-    public void setId(int id) {
-        this.mId = id;
-    }
-
-    public String getValue() {
-        return mValue;
-    }
-
-    public void setValue(String value) {
-        this.mValue = value;
+    public void setName(String value) {
+        this.mName = value;
     }
 
     public RealmList<Type> getTypes() {
@@ -51,7 +42,7 @@ public class Word extends RealmObject {
     public void removeType(Type type) {
         if(this.mTypes != null)
             for(Type iType : mTypes) {
-                if(iType.getId() == type.getId()) {
+                if(iType.getName().equals(type.getName())) {
                     mTypes.remove(type);
                     return;
                 }
@@ -97,7 +88,7 @@ public class Word extends RealmObject {
     public void removeCategory(Category category) {
         if(this.mCategories != null)
             for(Category iCategory : mCategories) {
-                if(iCategory.getId() == category.getId()) {
+                if(iCategory.getName().equals(category.getName())) {
                     mCategories.remove(category);
                     return;
                 }
@@ -120,7 +111,7 @@ public class Word extends RealmObject {
     public void removeTag(Tag tag) {
         if(this.mTags != null)
             for(Tag iTag : mTags) {
-                if(iTag.getId() == tag.getId()) {
+                if(iTag.getValue().equals(tag.getValue())) {
                     mTags.remove(tag);
                     return;
                 }

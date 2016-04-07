@@ -59,8 +59,12 @@ public class DatabaseManager {
         Realm.setDefaultConfiguration(getManualConfiguration(context));
         if(isFirstInstalled(context)) {
             Realm defaultRealm = Realm.getDefaultInstance();
-            addToDatabaseFromJson(context, defaultRealm, R.raw.type);
-            addToDatabaseFromJson(context, defaultRealm, R.raw.category);
+            try {
+                addToDatabaseFromJson(context, defaultRealm, R.raw.type, Type.class);
+                addToDatabaseFromJson(context, defaultRealm, R.raw.category, Category.class);
+            } catch (Exception e) {
+                Logger.e("DatabaseManager initiation", e.toString());
+            }
         }
         // save the new database version.
         SystemUtils.saveStringToLocalStorage(context, DATABASE_VERSION_KEY, mVersion + "");
@@ -84,15 +88,20 @@ public class DatabaseManager {
         return mConfig;
     }
 
-    public static void addToDatabaseFromJson(Context context, Realm realm, int idRawFile) {
+    public static void addToDatabaseFromJson(Context context, Realm realm, int idRawFile, Class theClass) throws Exception {
         if(context != null) {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.type);
+            InputStream inputStream = context.getResources().openRawResource(idRawFile);
             realm.beginTransaction();
             try {
-                realm.createAllFromJson(Type.class, inputStream);
+                realm.createAllFromJson(theClass, inputStream);
                 realm.commitTransaction();
             } catch (IOException e) {
+                Logger.e("addToDatabaseFromJson", e.toString());
                 realm.cancelTransaction();
+            } finally {
+                if(inputStream != null) {
+                    inputStream.close();
+                }
             }
         }
     }

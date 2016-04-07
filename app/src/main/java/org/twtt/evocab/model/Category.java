@@ -10,17 +10,8 @@ import io.realm.annotations.PrimaryKey;
  */
 public class Category extends RealmObject {
     @PrimaryKey
-    private int mId;
     private String mName;
     private String mDescription;
-
-    public int getId() {
-        return mId;
-    }
-
-    public void setId(int id) {
-        this.mId = id;
-    }
 
     public String getName() {
         return mName;
